@@ -1,10 +1,15 @@
 
 if(process.argv.length != 6)
 {
+  // General recommendation: Remove unused code instead of commenting it out. A reader of your code has no idea why the following
+  // line of comment is in your code. Was it an experiment? Is this work in progress? Source control systems like Git
+  // care for storing versions, so you can always look back in time to recover old code versions.
   //console.error('Invalid number of Arguments!');
   console.log("Invalid parameters");
   process.exit(1);
-}else if(!!!parseFloat(process.argv[2]))
+}
+// Why three `!`? Wouldn't one be enough?
+else if(!!!parseFloat(process.argv[2]))
 {
     //console.error('Not a number inserted! Usage: <number> <unit> to <unit>');
     console.log("Invalid parameters");
